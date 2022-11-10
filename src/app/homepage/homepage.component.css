@@ -1,0 +1,24 @@
+.outline{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 5rem 5rem;
+}
+
+.name{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.shop-card{
+  border: .1rem solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 30%;
+  cursor: pointer;
+}

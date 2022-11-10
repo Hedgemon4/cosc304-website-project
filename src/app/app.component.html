@@ -1,26 +1,13 @@
-<div>
-  <mat-toolbar color="primary">
-    <mat-toolbar-row>
-      <button mat-icon-button>
-        <mat-icon fontIcon="menu"></mat-icon>
-      </button>
-      <span>Only Ducks</span>
-      <span class="spacer"></span>
-      <button mat-icon-button>
-        <mat-icon fontIcon="shopping_cart_checkout"></mat-icon>
-      </button>
-    </mat-toolbar-row>
-  </mat-toolbar>
-</div>
-<h1 class="name">It's in the name</h1>
-<div class="outline">
-  <mat-card class="shop-card">
-    <mat-card-title>Shop</mat-card-title>
-    <img mat-card-lg-image src="https://m.media-amazon.com/images/I/619Mak6WCuL._AC_SY450_.jpg">
-  </mat-card>
-  <mat-card class="shop-card">
-    <a routerLink="/listorders" routerLinkActive="active">
-      <mat-card-title>View Orders</mat-card-title>
-    </a>
-  </mat-card>
-</div>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon fontIcon="menu"></mat-icon>
+    </button>
+    <span>Only Ducks</span>
+    <span class="spacer"></span>
+    <button mat-icon-button>
+      <mat-icon fontIcon="shopping_cart_checkout"></mat-icon>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
+<router-outlet></router-outlet>
