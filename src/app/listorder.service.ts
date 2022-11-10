@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import { Observable, throwError } from 'rxjs';
-import { map,  catchError, retry } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import {OrderSummary} from "./order-summary";
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,7 @@ export class ListorderService {
 
   constructor(private http: HttpClient) { }
 
-  getOrders(): Observable<string> {
-    return this.http.get(this.orderUrl, {responseType: "text"})
+  getOrders(): Observable<OrderSummary[]> {
+    return this.http.get<OrderSummary[]>(this.orderUrl)
   }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ListorderService} from "../listorder.service";
+import {OrderSummary} from "../order-summary";
 
 @Component({
   selector: 'app-listorders',
@@ -9,7 +10,11 @@ import {ListorderService} from "../listorder.service";
 
 
 export class ListordersComponent implements OnInit {
-  info: string = "test"
+  info: string = 'test'
+
+  test?: Object
+
+  orders? : OrderSummary[]
 
   constructor(private orderService: ListorderService) { }
 
@@ -18,6 +23,7 @@ export class ListordersComponent implements OnInit {
   }
 
   getInfo() {
-    this.orderService.getOrders().subscribe(info => this.info = info)
+    this.orderService.getOrders().subscribe((info : OrderSummary[] ) => this.orders = info)
+    // this.orderService.getOrders().subscribe(info => this.test = info)
   }
 }
