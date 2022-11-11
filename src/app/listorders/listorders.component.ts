@@ -9,7 +9,7 @@ import {OrderSummary} from "../order-summary";
 })
 
 export class ListordersComponent implements OnInit {
-  displayedColumns: string[] = ['orderId', 'customerId'];
+  displayedColumns: string[] = ['orderId', 'customerId', 'name', 'totalAmount'];
   orders : OrderSummary[] = [];
 
   constructor(private orderService: ListorderService) { }
