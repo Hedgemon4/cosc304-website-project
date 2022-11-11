@@ -1,15 +1,20 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Observable} from "rxjs";
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders } from "@angular/common/http";
+import {ProductSearch} from "./product-search";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ListproductsService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+  }
 
   getProducts(productName: string): Observable<Object> {
-      return this.http.post<string>('http://127.0.0.1/listprod', productName)
+    let ps = new class implements ProductSearch {
+      product = productName;
+    }
+    return this.http.post<ProductSearch>('http://127.0.0.1/listprod', ps, { headers: new HttpHeaders().set('Content-Type', 'application/json')})
   }
 }
