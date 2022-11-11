@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import {ListproductsService} from "../listproducts.service";
 
 @Component({
   selector: 'app-shop',
@@ -8,18 +9,15 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ShopComponent implements OnInit {
 
-  productName : String ="";
+  productName : string ="";
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private productService: ListproductsService) { }
 
   ngOnInit(): void {
   }
 
   sendSearch() {
-    this.http.post('http://127.0.0.1/listprod', this.productName).subscribe(
-      (response) => console.log(response),
-      (error) => console.log(error)
-    )
+    this.productService.getProducts(this.productName).subscribe()
   }
 
   resetSearch() {
