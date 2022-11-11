@@ -8,8 +8,8 @@ import {OrderSummary} from "../order-summary";
   styleUrls: ['./listorders.component.css']
 })
 
-
 export class ListordersComponent implements OnInit {
+  displayedColumns: string[] = ['orderId', 'customerId'];
   orders : OrderSummary[] = [];
 
   constructor(private orderService: ListorderService) { }

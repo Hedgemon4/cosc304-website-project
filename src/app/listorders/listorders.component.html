@@ -1,7 +1,21 @@
-<h1>Test</h1>
-<!--<p [innerHTML]="test"></p>-->
-<p *ngFor="let item of orders">{{item.totalAmount}}</p>
+<h1>Order List</h1>
 
-<table mat-table [dataSource]="orders">
+<table mat-table [dataSource]="orders" class="mat-elevation-z8">
 
+  <!-- orderId Column -->
+  <ng-container matColumnDef="orderId">
+    <th mat-header-cell *matHeaderCellDef> Order Id </th>
+    <td mat-cell *matCellDef="let order"> {{ order.orderId }} </td>
+  </ng-container>
+
+  <!-- customerId Column -->
+  <ng-container matColumnDef="customerId">
+    <th mat-header-cell *matHeaderCellDef> Customer Id </th>
+    <td mat-cell *matCellDef="let order"> {{ order.customerId }} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
+
+
