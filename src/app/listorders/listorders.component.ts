@@ -10,11 +10,7 @@ import {OrderSummary} from "../order-summary";
 
 
 export class ListordersComponent implements OnInit {
-  info: string = 'test'
-
-  test?: Object
-
-  orders? : OrderSummary[]
+  orders : OrderSummary[] = [];
 
   constructor(private orderService: ListorderService) { }
 
