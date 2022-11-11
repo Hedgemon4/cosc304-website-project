@@ -1,0 +1,13 @@
+<h1>Shop</h1>
+<form class="example-form">
+  <section>
+    <mat-form-field appearance="outline">
+      <span matPrefix> </span>
+      <input type="tel" matInput placeholder="" name= "search" [(ngModel)]= "productName">
+      <button matSuffix mat-button><mat-icon >search</mat-icon></button>
+    </mat-form-field>
+    <button mat-button color="primary" (click)="sendSearch()">Search</button>
+    <button mat-button (click)="resetSearch()">Reset</button>
+  </section>
+</form>
+<mat-divider></mat-divider>
