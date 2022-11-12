@@ -20,6 +20,5 @@ export class ListordersComponent implements OnInit {
 
   getInfo() {
     this.orderService.getOrders().subscribe((info : OrderSummary[] ) => this.orders = info)
-    // this.orderService.getOrders().subscribe(info => this.test = info)
   }
 }
