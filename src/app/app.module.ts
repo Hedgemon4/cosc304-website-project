@@ -16,6 +16,7 @@ import {ShopComponent} from './shop/shop.component';
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {FormsModule} from "@angular/forms";
+import {MatTableModule} from "@angular/material/table";
 
 @NgModule({
   declarations: [
@@ -24,20 +25,21 @@ import {FormsModule} from "@angular/forms";
     HomepageComponent,
     ShopComponent
   ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatIconModule,
-    MatDividerModule,
-    MatToolbarModule,
-    MatCardModule,
-    AppRoutingModule,
-    HttpClientModule,
-    MatFormFieldModule,
-    MatInputModule,
-    FormsModule
-  ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        MatButtonModule,
+        MatIconModule,
+        MatDividerModule,
+        MatToolbarModule,
+        MatCardModule,
+        AppRoutingModule,
+        HttpClientModule,
+        MatFormFieldModule,
+        MatInputModule,
+        FormsModule,
+        MatTableModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

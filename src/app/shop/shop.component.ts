@@ -10,6 +10,7 @@ import {Observable} from "rxjs";
   styleUrls: ['./shop.component.css']
 })
 export class ShopComponent implements OnInit {
+  displayedColumns: string[] = ['productName', 'category', 'productPrice']
 
   productName : string ="";
 
